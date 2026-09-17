@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="SAISHO">
+  <!-- The ring mark from the SAISHO logo, lifted out of the wordmark. The
+       full lockup is 3.7:1 and turns to mush at 16px; the mark alone stays
+       legible. Geometry matches assets/SAISHO-logo.svg exactly.
+
+       The ring is white in the logo, which disappears against a light
+       browser tab. SVG favicons honour prefers-color-scheme, so the ring
+       flips to the label colour on light and back to white on dark. -->
+  <style>
+    .ring { stroke: #1d1d1f; }
+    @media (prefers-color-scheme: dark) {
+      .ring { stroke: #ffffff; }
+    }
+  </style>
+  <defs>
+    <linearGradient id="g" gradientUnits="userSpaceOnUse" x1="14" y1="106" x2="106" y2="14">
+      <stop offset="0" stop-color="#1b4f91"/>
+      <stop offset="0.45" stop-color="#18a8c0"/>
+      <stop offset="0.75" stop-color="#2fc0a8"/>
+      <stop offset="1" stop-color="#2fd88f"/>
+    </linearGradient>
+    <clipPath id="split"><polygon points="0,120 120,0 120,120"/></clipPath>
+  </defs>
+  <g clip-path="url(#split)"><circle cx="60" cy="60" r="45" fill="url(#g)"/></g>
+  <circle class="ring" cx="60" cy="60" r="50" fill="none" stroke-width="12"/>
+</svg>

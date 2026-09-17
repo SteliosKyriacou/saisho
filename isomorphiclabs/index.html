@@ -8,11 +8,12 @@
     <!--
       GitHub Pages serves static files only, so it cannot issue a server-side
       301. This page redirects client-side: location.replace() fires first (it
-      does not leave an entry in the back-button history), with a meta refresh
-      as the fallback when JavaScript is unavailable, and a manual link if
-      both are blocked.
+      leaves no entry in the back-button history), with a meta refresh as the
+      fallback when JavaScript is unavailable, and a manual link if both are
+      blocked. Most people never see this page.
     -->
     <meta http-equiv="refresh" content="0; url=http://34.169.179.175:4003/">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../index.css">
     <style>
         body {
@@ -20,20 +21,27 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
+            padding: var(--space-8);
             text-align: center;
-            padding: 2rem;
         }
-        .redirect-card p {
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
+        .redirect {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-6);
         }
+        .redirect__logo { height: 24px; width: auto; }
+        .redirect p { margin: 0; color: var(--label-secondary); }
     </style>
 </head>
 <body>
-    <div class="redirect-card">
-        <img src="../assets/SAISHO-logo.svg" alt="SAISHO" style="height: 32px; width: auto; margin: 0 auto 2rem; display: block;">
+    <div class="redirect">
+        <picture>
+            <source srcset="../assets/SAISHO-logo.svg" media="(prefers-color-scheme: dark)">
+            <img class="redirect__logo" src="../assets/SAISHO-logo-light.svg" alt="SAISHO">
+        </picture>
         <p>Taking you to the AlphaForge demo.</p>
-        <a href="http://34.169.179.175:4003/" class="btn btn-primary">Continue</a>
+        <a class="btn btn--primary" href="http://34.169.179.175:4003/">Continue</a>
     </div>
     <script>
         location.replace('http://34.169.179.175:4003/');

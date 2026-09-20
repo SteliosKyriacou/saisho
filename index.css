@@ -210,6 +210,11 @@ a { color: inherit; }
     text-wrap: balance;
 }
 
+/* Only the claim itself carries the bold weight. typography.md › Conveying
+   hierarchy: weight separates the two halves, so the qualifier reads as a
+   subordinate clause without a second type size or colour. */
+.hero__title-tail { font-weight: 400; }
+
 .hero__lead {
     margin: var(--space-8) 0 0;
     max-width: var(--measure);

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting | SAISHO</title>
+    <meta name="robots" content="noindex">
+    <!--
+      GitHub Pages serves static files only, so it cannot issue a server-side
+      301. This page redirects client-side: location.replace() fires first (it
+      leaves no entry in the back-button history), with a meta refresh as the
+      fallback when JavaScript is unavailable, and a manual link if both are
+      blocked. Most people never see this page.
+    -->
+    <meta http-equiv="refresh" content="0; url=http://34.169.179.175:4003/">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../index.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: var(--space-8);
+            text-align: center;
+        }
+        .redirect {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-6);
+        }
+        .redirect__logo { height: 24px; width: auto; }
+        .redirect p { margin: 0; color: var(--label-secondary); }
+    </style>
+</head>
+<body>
+    <div class="redirect">
+        <picture>
+            <source srcset="../assets/SAISHO-logo.svg" media="(prefers-color-scheme: dark)">
+            <img class="redirect__logo" src="../assets/SAISHO-logo-light.svg" alt="SAISHO">
+        </picture>
+        <p>Taking you to the AlphaForge demo.</p>
+        <a class="btn btn--primary" href="http://34.169.179.175:4003/">Continue</a>
+    </div>
+    <script>
+        location.replace('http://34.169.179.175:4003/');
+    </script>
+</body>
+</html>

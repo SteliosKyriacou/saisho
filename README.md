@@ -38,6 +38,8 @@ history. Nothing was copied across except the working tree as of the move.
 | `bayland-capital/index.html` | Client-side redirect to the same demo host |
 | `mjff/index.html` | Client-side redirect to the same demo host |
 | `SV_health_Investors/index.html` | Client-side redirect to the same demo host |
+| `calibr-skaggs/index.html` | Client-side redirect to the same demo host |
+| `ardd/index.html` | Client-side redirect to the same demo host |
 | `index.css` | Stylesheet for all pages |
 | `main.js` | Animated background canvas and scroll reveals |
 | `assets/` | Logos, team photos, and the social preview card |
@@ -70,6 +72,8 @@ their directory name:
 | `/bayland-capital` | `http://34.169.179.175:4003/` |
 | `/mjff` | `http://34.169.179.175:4003/` |
 | `/SV_health_Investors` | `http://34.169.179.175:4003/` |
+| `/calibr-skaggs` | `http://34.169.179.175:4003/` |
+| `/ardd` | `http://34.169.179.175:4003/` |
 
 Note that `/SV_health_Investors` is the only one with capitals and
 underscores; the rest are lowercase and hyphenated. Pages URLs are

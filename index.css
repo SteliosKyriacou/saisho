@@ -168,6 +168,17 @@ a { color: inherit; }
     color: var(--label-secondary);
 }
 
+/* Only the action is the link, not the whole band: wrapping the band would
+   make dragging across the key start a link drag instead of selecting it. */
+.banner__link {
+    color: var(--accent);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+    text-decoration-thickness: 1px;
+}
+.banner__link:hover { text-decoration-thickness: 2px; }
+
 /* The key is the one string a visitor has to reproduce exactly, so it gets
    the monospace treatment that marks it as a literal, and one click selects
    the whole token rather than a word of it. */

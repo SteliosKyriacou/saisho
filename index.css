@@ -72,6 +72,12 @@
     --glass-fill:   rgba(255, 255, 255, 0.72);
     --glass-blur:   saturate(1.4) blur(24px);
     --glass-border: rgba(0, 0, 0, 0.08);
+
+    /* Accent tints for announcements. color.md reserves the solid accent
+       fill for the primary action, so anything informational gets a wash. */
+    --accent-tint:        rgba(13, 106, 125, 0.08);
+    --accent-tint-strong: rgba(13, 106, 125, 0.15);
+    --accent-tint-border: rgba(13, 106, 125, 0.20);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -89,6 +95,10 @@
 
         --glass-fill:   rgba(28, 28, 30, 0.72);
         --glass-border: rgba(255, 255, 255, 0.12);
+
+        --accent-tint:        rgba(90, 212, 230, 0.12);
+        --accent-tint-strong: rgba(90, 212, 230, 0.20);
+        --accent-tint-border: rgba(90, 212, 230, 0.26);
     }
 }
 
@@ -126,6 +136,50 @@ a { color: inherit; }
     max-width: var(--page);
     margin-inline: auto;
     padding-inline: var(--space-6);
+}
+
+/* ---------------------------------------------------------------- banner */
+/* Full-bleed announcement band above the nav. It carries a tint rather than
+   the solid accent fill, so it stays loud enough to be unmissable without
+   claiming the one prominent-action colour the buttons own. */
+
+.banner {
+    background: var(--accent-tint);
+    border-bottom: 1px solid var(--accent-tint-border);
+}
+
+.banner__text {
+    margin: 0;
+    padding-block: var(--space-6);
+    font-size: var(--type-callout);
+    line-height: 1.45;
+    text-align: center;
+    text-wrap: pretty;
+    color: var(--label);
+}
+
+.banner__event { font-weight: 600; letter-spacing: -0.01em; }
+
+/* The instruction drops to its own line so the offer and the thing you have
+   to do with it are scannable separately. */
+.banner__cta {
+    display: block;
+    margin-top: var(--space-2);
+    color: var(--label-secondary);
+}
+
+/* The key is the one string a visitor has to reproduce exactly, so it gets
+   the monospace treatment that marks it as a literal, and one click selects
+   the whole token rather than a word of it. */
+.banner__key {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+    font-size: 0.9em;
+    font-weight: 600;
+    padding: 0.15em 0.45em;
+    border-radius: 5px;
+    background: var(--accent-tint-strong);
+    user-select: all;
+    -webkit-user-select: all;
 }
 
 /* ------------------------------------------------- functional layer: nav */

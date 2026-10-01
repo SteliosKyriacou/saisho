@@ -189,8 +189,13 @@ a { color: inherit; }
     text-decoration: none;
     white-space: nowrap;
     cursor: pointer;
-    transition: background-color 0.2s ease, opacity 0.2s ease;
+    transition: background-color 0.2s ease, opacity 0.2s ease, transform 0.1s ease;
 }
+
+/* buttons.md: "Always include a press state for a custom button. Without a
+   press state, a button can feel unresponsive, making people wonder if it's
+   accepting their input." The file had hover states only. */
+.btn:active { transform: scale(0.97); }
 
 /* liquid-glass.md › Colour: "To emphasize a primary action, color the
    background rather than the symbol or label." One prominent button per view. */
@@ -208,6 +213,7 @@ a { color: inherit; }
     color: var(--accent);
 }
 .btn--secondary:hover { background: var(--accent-tint-strong); }
+.btn--secondary:active { background: var(--accent-tint-border); }
 
 .btn--compact { min-height: 36px; padding: 0 var(--space-4); }
 
@@ -251,16 +257,33 @@ a { color: inherit; }
     gap: var(--space-4);
 }
 
-/* The conference offer. Footnote weight: it qualifies the button above it
-   rather than competing with the lead. */
-.hero__note {
-    margin: var(--space-6) 0 0;
-    max-width: var(--measure);
+/* The conference offer, above the headline. layout.md: "Group related items
+   to clearly express related information" using negative space and container
+   shapes — so the sentence, the key and the action sit in one rounded, tinted
+   box and read as a single thing. Footnote weight keeps it subordinate to the
+   headline it precedes. */
+.offer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-4) var(--space-6);
+    margin: 0 0 var(--space-8);
+    padding: var(--space-4) var(--space-6);
+    border: 1px solid var(--accent-tint-border);
+    border-radius: 16px;
+    background: var(--accent-tint);
+}
+
+.offer__text {
+    margin: 0;
+    flex: 1 1 24rem;
     font-size: var(--type-footnote);
     line-height: 1.5;
-    color: var(--label-tertiary);
+    color: var(--label-secondary);
     text-wrap: pretty;
 }
+
+.offer__event { font-weight: 600; color: var(--label); }
 
 /* The key is the one string a visitor has to reproduce exactly, so it gets
    the monospace treatment that marks it as a literal, and one click selects

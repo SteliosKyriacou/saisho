@@ -55,16 +55,24 @@
     <main>
 
         <section class="hero container">
+            <!-- The conference offer, above the headline. layout.md groups
+                 related items with negative space and a container shape, so the
+                 sentence, the key and the action travel together. It stays at
+                 footnote weight: layout.md orders content by importance, and
+                 the headline below is still the most important thing here. -->
+            <aside class="offer" aria-label="ARDD 2026 offer">
+                <p class="offer__text"><strong class="offer__event">ARDD 2026</strong> Our roots are in aging biology, and we want to give back: we’re offering 50 complimentary drug assessments to the ARDD community. API key: <code class="key">ardd2026</code></p>
+                <!-- buttons.md: distinguish the preferred choice by STYLE, not
+                     size. Same 44pt height as the hero button below, differing
+                     only in fill, so the two read as one coherent set. -->
+                <a class="btn btn--secondary" href="/ardd">Claim your assessment</a>
+            </aside>
+
             <h1 class="hero__title">Predicting which drug candidates will succeed in the clinic <span class="hero__title-tail">before extensive preclinical and clinical data are available</span></h1>
             <p class="hero__lead">From just a drug’s structure, target, and indication, SAISHO predicts clinical success, explains the risks, and separates fixable problems from reasons to stop. That prediction gives drug teams and investors a consistent basis for decisions that commit years and hundreds of millions of dollars.</p>
             <div class="hero__actions">
                 <a class="btn btn--primary" href="mailto:info@saisho.ai">Test it on your asset</a>
-                <!-- Secondary, not a second primary: layout.md gives a view one
-                     prominent action, so the conference offer takes the tinted
-                     variant and leaves the accent fill to the main CTA. -->
-                <a class="btn btn--secondary" href="/ardd">ARDD 2026 offer</a>
             </div>
-            <p class="hero__note">Our roots are in aging biology, and we want to give back: we’re offering 50 complimentary drug assessments to the ARDD community. API key: <code class="key">ardd2026</code></p>
         </section>
 
         <section class="partners" aria-labelledby="partners-label">

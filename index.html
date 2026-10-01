@@ -37,16 +37,6 @@
 </head>
 <body>
 
-    <!-- Conference banner. An announcement, not a control: it sits above the
-         sticky nav and scrolls away with the page, so it never holds space
-         at the top of the viewport or competes with the hero. -->
-    <aside class="banner" aria-label="ARDD 2026">
-        <p class="banner__text container">
-            <strong class="banner__event">ARDD 2026</strong><span aria-hidden="true"> · </span>Our roots are in aging biology, and we want to give back: we’re offering 50 complimentary drug assessments to the ARDD community.
-            <span class="banner__cta">Enter API key <code class="banner__key">ardd2026</code> to <a class="banner__link" href="/ardd">run your first prediction</a>.</span>
-        </p>
-    </aside>
-
     <!-- The functional layer. The only Liquid Glass surface on the page. -->
     <header class="nav">
         <div class="nav__inner container">
@@ -69,7 +59,12 @@
             <p class="hero__lead">From just a drug’s structure, target, and indication, SAISHO predicts clinical success, explains the risks, and separates fixable problems from reasons to stop. That prediction gives drug teams and investors a consistent basis for decisions that commit years and hundreds of millions of dollars.</p>
             <div class="hero__actions">
                 <a class="btn btn--primary" href="mailto:info@saisho.ai">Test it on your asset</a>
+                <!-- Secondary, not a second primary: layout.md gives a view one
+                     prominent action, so the conference offer takes the tinted
+                     variant and leaves the accent fill to the main CTA. -->
+                <a class="btn btn--secondary" href="/ardd">ARDD 2026 offer</a>
             </div>
+            <p class="hero__note">Our roots are in aging biology, and we want to give back: we’re offering 50 complimentary drug assessments to the ARDD community. API key: <code class="key">ardd2026</code></p>
         </section>
 
         <section class="partners" aria-labelledby="partners-label">

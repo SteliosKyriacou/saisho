@@ -73,11 +73,6 @@
     --glass-blur:   saturate(1.4) blur(24px);
     --glass-border: rgba(0, 0, 0, 0.08);
 
-    /* Accent tints for announcements. color.md reserves the solid accent
-       fill for the primary action, so anything informational gets a wash. */
-    --accent-tint:        rgba(13, 106, 125, 0.08);
-    --accent-tint-strong: rgba(13, 106, 125, 0.15);
-    --accent-tint-border: rgba(13, 106, 125, 0.20);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -96,9 +91,6 @@
         --glass-fill:   rgba(28, 28, 30, 0.72);
         --glass-border: rgba(255, 255, 255, 0.12);
 
-        --accent-tint:        rgba(90, 212, 230, 0.12);
-        --accent-tint-strong: rgba(90, 212, 230, 0.20);
-        --accent-tint-border: rgba(90, 212, 230, 0.26);
     }
 }
 
@@ -205,16 +197,6 @@ a { color: inherit; }
 }
 .btn--primary:hover { background: var(--accent-hover); }
 
-/* The secondary action. liquid-glass.md coulours the BACKGROUND for the
-   prominent action only, so this one takes a wash of the accent and wears
-   the accent on its label instead — present, but plainly subordinate. */
-.btn--secondary {
-    background: var(--accent-tint);
-    color: var(--accent);
-}
-.btn--secondary:hover { background: var(--accent-tint-strong); }
-.btn--secondary:active { background: var(--accent-tint-border); }
-
 .btn--compact { min-height: 36px; padding: 0 var(--space-4); }
 
 /* ------------------------------------------------------------------ hero */
@@ -255,49 +237,6 @@ a { color: inherit; }
     flex-wrap: wrap;
     align-items: center;
     gap: var(--space-4);
-}
-
-/* The conference offer, above the headline. layout.md: "Group related items
-   to clearly express related information" using negative space and container
-   shapes — so the sentence, the key and the action sit in one rounded, tinted
-   box and read as a single thing. Footnote weight keeps it subordinate to the
-   headline it precedes. */
-.offer {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: var(--space-4) var(--space-6);
-    margin: 0 0 var(--space-8);
-    padding: var(--space-4) var(--space-6);
-    border: 1px solid var(--accent-tint-border);
-    border-radius: 16px;
-    background: var(--accent-tint);
-}
-
-.offer__text {
-    margin: 0;
-    flex: 1 1 24rem;
-    font-size: var(--type-footnote);
-    line-height: 1.5;
-    color: var(--label-secondary);
-    text-wrap: pretty;
-}
-
-.offer__event { font-weight: 600; color: var(--label); }
-
-/* The key is the one string a visitor has to reproduce exactly, so it gets
-   the monospace treatment that marks it as a literal, and one click selects
-   the whole token rather than a word of it. */
-.key {
-    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
-    font-size: 0.95em;
-    font-weight: 600;
-    padding: 0.15em 0.45em;
-    border-radius: 5px;
-    background: var(--accent-tint-strong);
-    color: var(--label-secondary);
-    user-select: all;
-    -webkit-user-select: all;
 }
 
 /* -------------------------------------------------------------- partners */

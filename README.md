@@ -69,13 +69,13 @@ their directory name:
 
 | Path | Destination |
 | --- | --- |
-| `/isomorphiclabs` | `http://34.169.179.175:4003/` |
-| `/bayland-capital` | `http://34.169.179.175:4003/` |
-| `/mjff` | `http://34.169.179.175:4003/` |
-| `/SV_health_Investors` | `http://34.169.179.175:4003/` |
-| `/calibr-skaggs` | `http://34.169.179.175:4003/` |
-| `/ardd` | `http://34.169.179.175:4003/` |
-| `/metavallon` | `http://34.169.179.175:4003/` |
+| `/isomorphiclabs` | `http://34.169.179.175:4005/` |
+| `/bayland-capital` | `http://34.169.179.175:4005/` |
+| `/mjff` | `http://34.169.179.175:4005/` |
+| `/SV_health_Investors` | `http://34.169.179.175:4005/` |
+| `/calibr-skaggs` | `http://34.169.179.175:4005/` |
+| `/ardd` | `http://34.169.179.175:4005/` |
+| `/metavallon` | `http://34.169.179.175:4005/` |
 
 Note that `/SV_health_Investors` is the only one with capitals and
 underscores; the rest are lowercase and hyphenated. Pages URLs are

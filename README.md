@@ -43,6 +43,7 @@ history. Nothing was copied across except the working tree as of the move.
 | `metavallon/index.html` | Client-side redirect to the same demo host |
 | `shanda/index.html` | Client-side redirect to the same demo host |
 | `NeuroClearance/index.html` | Client-side redirect to the same demo host |
+| `internal/index.html` | Client-side redirect to the same demo host |
 | `index.css` | Stylesheet for all pages |
 | `main.js` | Animated background canvas and scroll reveals |
 | `assets/` | Logos, team photos, and the social preview card |
@@ -80,12 +81,15 @@ their directory name:
 | `/metavallon` | `http://34.169.179.175:4005/` |
 | `/shanda` | `http://34.169.179.175:4005/` |
 | `/NeuroClearance` | `http://34.169.179.175:4005/` |
+| `/internal` | `http://34.169.179.175:4005/` |
 
 Note that `/SV_health_Investors` and `/NeuroClearance` carry capitals;
 the rest are lowercase. Pages URLs are case-sensitive, so
 `/sv_health_investors` and `/neuroclearance` both return 404.
 
-These are per-prospect vanity links pointing at the same demo. That target
+These are per-prospect vanity links pointing at the same demo. `/internal`
+is named for who it is handed to, not for any access control: like every
+other path here it is public, unauthenticated and indexable. That target
 is a bare IP served over plain HTTP, so the destination is not encrypted
 and every one of these links breaks at once if the instance IP changes. To
 add another, copy an existing directory and rename it. To repoint them all,

@@ -33,7 +33,7 @@ history. Nothing was copied across except the working tree as of the move.
 | Path | Purpose |
 | --- | --- |
 | `index.html` | Main landing page |
-| `test1/index.html` | Scratch page with a GCP iframe embed |
+| `test1/index.html` | Scratch page; iframes the demo host |
 | `isomorphiclabs/index.html` | Client-side redirect to the AlphaForge demo host |
 | `bayland-capital/index.html` | Client-side redirect to the same demo host |
 | `mjff/index.html` | Client-side redirect to the same demo host |
@@ -41,6 +41,8 @@ history. Nothing was copied across except the working tree as of the move.
 | `calibr-skaggs/index.html` | Client-side redirect to the same demo host |
 | `ardd/index.html` | Client-side redirect to the same demo host |
 | `metavallon/index.html` | Client-side redirect to the same demo host |
+| `shanda/index.html` | Client-side redirect to the same demo host |
+| `NeuroClearance/index.html` | Client-side redirect to the same demo host |
 | `index.css` | Stylesheet for all pages |
 | `main.js` | Animated background canvas and scroll reveals |
 | `assets/` | Logos, team photos, and the social preview card |
@@ -76,10 +78,12 @@ their directory name:
 | `/calibr-skaggs` | `http://34.169.179.175:4005/` |
 | `/ardd` | `http://34.169.179.175:4005/` |
 | `/metavallon` | `http://34.169.179.175:4005/` |
+| `/shanda` | `http://34.169.179.175:4005/` |
+| `/NeuroClearance` | `http://34.169.179.175:4005/` |
 
-Note that `/SV_health_Investors` is the only one with capitals and
-underscores; the rest are lowercase and hyphenated. Pages URLs are
-case-sensitive, so `/sv_health_investors` returns 404.
+Note that `/SV_health_Investors` and `/NeuroClearance` carry capitals;
+the rest are lowercase. Pages URLs are case-sensitive, so
+`/sv_health_investors` and `/neuroclearance` both return 404.
 
 These are per-prospect vanity links pointing at the same demo. That target
 is a bare IP served over plain HTTP, so the destination is not encrypted

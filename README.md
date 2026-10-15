@@ -44,6 +44,7 @@ history. Nothing was copied across except the working tree as of the move.
 | `shanda/index.html` | Client-side redirect to the same demo host |
 | `NeuroClearance/index.html` | Client-side redirect to the same demo host |
 | `internal/index.html` | Client-side redirect to the same demo host |
+| `leaderboard/index.html` | Client-side redirect to the leaderboard page |
 | `index.css` | Stylesheet for all pages |
 | `main.js` | Animated background canvas and scroll reveals |
 | `assets/` | Logos, team photos, and the social preview card |
@@ -67,8 +68,9 @@ card so the two do not disagree.
 
 GitHub Pages cannot issue server-side 301s, so redirects are static pages
 that bounce the browser client-side (`location.replace()`, with a meta
-refresh fallback and a manual link). They are byte-identical apart from
-their directory name:
+refresh fallback and a manual link). The demo redirects are byte-identical
+apart from their directory name; `/leaderboard` differs only in its target
+and its one line of body text:
 
 | Path | Destination |
 | --- | --- |
@@ -82,12 +84,14 @@ their directory name:
 | `/shanda` | `http://34.169.179.175:4005/` |
 | `/NeuroClearance` | `http://34.169.179.175:4005/` |
 | `/internal` | `http://34.169.179.175:4005/` |
+| `/leaderboard` | `http://34.169.179.175:4004/leaderboard` |
 
 Note that `/SV_health_Investors` and `/NeuroClearance` carry capitals;
 the rest are lowercase. Pages URLs are case-sensitive, so
 `/sv_health_investors` and `/neuroclearance` both return 404.
 
-These are per-prospect vanity links pointing at the same demo. `/internal`
+All but `/leaderboard` are per-prospect vanity links pointing at the same
+demo; `/leaderboard` goes to a different service on port 4004. `/internal`
 is named for who it is handed to, not for any access control: like every
 other path here it is public, unauthenticated and indexable. That target
 is a bare IP served over plain HTTP, so the destination is not encrypted

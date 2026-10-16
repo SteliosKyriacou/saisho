@@ -33,7 +33,7 @@ history. Nothing was copied across except the working tree as of the move.
 | Path | Purpose |
 | --- | --- |
 | `index.html` | Main landing page |
-| `test1/index.html` | Scratch page; iframes the demo host |
+| `test1/index.html` | Scratch page; iframes `http://107.219.198.37:4005/` |
 | `isomorphiclabs/index.html` | Client-side redirect to the AlphaForge demo host |
 | `bayland-capital/index.html` | Client-side redirect to the same demo host |
 | `mjff/index.html` | Client-side redirect to the same demo host |
@@ -50,7 +50,9 @@ history. Nothing was copied across except the working tree as of the move.
 | `assets/` | Logos, team photos, and the social preview card |
 
 `test1/index.html` is not linked from the site's navigation; it is reachable
-only by direct URL.
+only by direct URL. It points at a different host from the redirects below,
+and because it embeds plain HTTP inside an HTTPS page, browsers block the
+frame as mixed content.
 
 `aged_biology.html` and `roi_model.html` were removed: they carried the older
 discovery-platform framing that contradicted the rating-agency positioning.

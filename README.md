@@ -100,7 +100,7 @@ and its one line of body text:
 | `/shanda` | `https://www.saisho.ai/alphaforge/` |
 | `/NeuroClearance` | `https://www.saisho.ai/alphaforge/` |
 | `/internal` | `https://www.saisho.ai/alphaforge/` |
-| `/leaderboard` | `http://34.169.179.175:4004/leaderboard` |
+| `/leaderboard` | `http://34.169.179.175:4006/` |
 
 Note that `/SV_health_Investors` and `/NeuroClearance` carry capitals;
 the rest are lowercase. Pages URLs are case-sensitive, so
@@ -108,7 +108,7 @@ the rest are lowercase. Pages URLs are case-sensitive, so
 
 All but `/leaderboard` are per-prospect vanity links pointing at the same
 page, `/alphaforge/` on this site; the app is not told which link a visitor
-came from. `/leaderboard` goes to a different service on port 4004: that one
+came from. `/leaderboard` goes to a different service on port 4006: that one
 is still a bare IP over plain HTTP, so its destination is not encrypted and it
 breaks if the instance IP changes. The rest no longer name a server at all, so
 the instance can move without touching them. `/internal` is named for who it
